@@ -21,7 +21,6 @@ Novel View Synthesis/
 └── kaggle/             # ноутбуки/конфиги для запуска на Kaggle
 ```
 
-Датасет в репу не коммитим (см. `.gitignore`).
 
 ## План
 
