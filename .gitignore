@@ -1,6 +1,7 @@
 # Data
 dataset/
 data/
+final_dataset_*/
 *.zip
 *.tar
 *.tar.gz
