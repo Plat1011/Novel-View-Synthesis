@@ -18,6 +18,7 @@ sys.path.insert(0, str(ROOT))
 from src.data import load_sample
 from src.geometry import psnr, normalized_score
 from src.pipelines.lidar_warp import render as render_lidar_warp
+from src.pipelines.lidar_inverse_warp import render as render_inverse_warp
 
 
 def temporal_mean(sample) -> np.ndarray:
@@ -55,6 +56,9 @@ def main(sample_dir: str) -> None:
         "temporal_mean": temporal_mean,
         "lidar_warp_r1": lambda s: render_lidar_warp(s, splat_radius=1),
         "lidar_warp_r2": lambda s: render_lidar_warp(s, splat_radius=2),
+        "inverse_warp_r1": lambda s: render_inverse_warp(s, splat_radius=1),
+        "inverse_warp_r2": lambda s: render_inverse_warp(s, splat_radius=2),
+        "inverse_warp_r3": lambda s: render_inverse_warp(s, splat_radius=3),
     }
 
     print("\npredictions:")
