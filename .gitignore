@@ -1,0 +1,71 @@
+# Data
+dataset/
+data/
+*.zip
+*.tar
+*.tar.gz
+
+# Submissions / outputs
+submission/
+submissions/
+outputs/
+runs/
+checkpoints/
+*.ckpt
+*.pth
+*.pt
+
+# Lidar / large binary
+*.npz
+*.npy
+*.ply
+*.pcd
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtualenvs
+.venv/
+venv/
+env/
+ENV/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+__MACOSX/
+
+# Local config
+.env
+.env.local
+
+# RIFE checkpoint (large, fetched separately)
+baseline/baseline_files/baseline_ensemble/ECCV2022-RIFE/
+baseline/baseline_files/baseline_ensemble/train_log/*.pkl
