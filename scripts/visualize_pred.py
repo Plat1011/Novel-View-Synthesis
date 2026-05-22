@@ -30,10 +30,22 @@ def temporal_mean(sample):
     return ((1.0 - a) * img0 + a * img1).clip(0, 255).astype(np.uint8)
 
 
+def _rife(sample):
+    from src.pipelines.rife import render as r
+    return r(sample)
+
+
+def _rife_dis(sample):
+    from src.pipelines.rife_dis import render as r
+    return r(sample)
+
+
 PIPELINES = {
     "temporal_mean": temporal_mean,
     "forward_warp": lambda s: render_forward_warp(s, splat_radius=1),
     "inverse_warp": lambda s: render_inverse_warp(s, splat_radius=1),
+    "rife": _rife,
+    "rife_dis": _rife_dis,
 }
 
 
